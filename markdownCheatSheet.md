@@ -52,6 +52,16 @@ voici un bloc de code:
 
 Il suffit d'indenter une fois
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+ 
+```python
+s = "Python syntax highlighting"
+print s
+```
+
 ---------------------------
 
 Ecrire un morceau de code :
