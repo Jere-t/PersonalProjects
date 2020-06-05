@@ -76,6 +76,19 @@ Rendez-vous sur le [Site du Zéro](http://www.siteduzero.com) pour tout 
 
 ---------------------------
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+---------------------------
+
 Si on ne peux pas faire en markdown, on peut l'écrire en HTML
 
 ---------------------------
