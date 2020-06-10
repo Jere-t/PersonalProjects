@@ -14,6 +14,6 @@ A realtional DB follow the *ACID* properties :
 
 Theses properties can not be applied in a distributed context like NoSql because a syncronization between each server has to be done. 
 So a NoSql base follow the *BASE* rules :
-*Basically Available : quelle que soit la charge de la base de données (données/requêtes), le système garantie un taux de disponibilité de la donnée
-*Soft-state : La base peut changer lors des mises à jour ou lors d'ajout/suppression de serveurs. La base NoSQL n'a pas à être cohérente à tout instant
-*Eventually consistent : À terme, la base atteindra un état cohérent
+* Basically Available : quelle que soit la charge de la base de données (données/requêtes), le système garantie un taux de disponibilité de la donnée
+* Soft-state : La base peut changer lors des mises à jour ou lors d'ajout/suppression de serveurs. La base NoSQL n'a pas à être cohérente à tout instant
+* Eventually consistent : À terme, la base atteindra un état cohérent
