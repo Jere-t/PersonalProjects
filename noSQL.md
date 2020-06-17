@@ -20,15 +20,15 @@ So a NoSql base follow the **BASE** rules :
 
 ## MongoDB
 
-  db.restaurants.findOne()
-  db.restaurants.find( { "borough" : "Brooklyn" } )
-  db.restaurants.find( { "borough" : "Brooklyn" } ).count()
-  db.restaurants.find(
+    db.restaurants.findOne()
+    db.restaurants.find( { "borough" : "Brooklyn" } )
+    db.restaurants.find( { "borough" : "Brooklyn" } ).count()
+    db.restaurants.find(
       {"borough":"Brooklyn",     
        "cuisine":"Italian",
        "name":/pizza/i,         //regex --> "pizza" not case sensitive
        "address.street" : "5 Avenue"},
       {"name" : 1,                  //projection --> show only specific keys
        "grades.score" : 1}
-  )
+    )
   
