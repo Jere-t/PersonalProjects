@@ -19,8 +19,11 @@ So a NoSql base follow the **BASE** rules :
 * Eventually consistent : À terme, la base atteindra un état cohérent
 
 ## MongoDB
-
+    
     db.restaurants.findOne()
+    db.getCollection('restaurants').findOne()
+
+```javascript
     db.restaurants.find( { "borough" : "Brooklyn" } )
     db.restaurants.find( { "borough" : "Brooklyn" } ).count()
     db.restaurants.find(
@@ -31,4 +34,4 @@ So a NoSql base follow the **BASE** rules :
       {"name" : 1,                  //projection --> show only specific keys
        "grades.score" : 1}
     )
-  
+```
