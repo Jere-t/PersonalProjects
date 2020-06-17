@@ -17,3 +17,18 @@ So a NoSql base follow the **BASE** rules :
 * Basically Available : quelle que soit la charge de la base de données (données/requêtes), le système garantie un taux de disponibilité de la donnée
 * Soft-state : La base peut changer lors des mises à jour ou lors d'ajout/suppression de serveurs. La base NoSQL n'a pas à être cohérente à tout instant
 * Eventually consistent : À terme, la base atteindra un état cohérent
+
+## MongoDB
+
+  db.restaurants.findOne()
+  db.restaurants.find( { "borough" : "Brooklyn" } )
+  db.restaurants.find( { "borough" : "Brooklyn" } ).count()
+  db.restaurants.find(
+      {"borough":"Brooklyn",     
+       "cuisine":"Italian",
+       "name":/pizza/i,         //regex --> "pizza" not case sensitive
+       "address.street" : "5 Avenue"},
+      {"name" : 1,                  //projection --> show only specific keys
+       "grades.score" : 1}
+  )
+  
