@@ -3,7 +3,7 @@ const app = express();
 
 app.use((req, res, next) => {
   console.log('Requête reçue !');
-  next();
+  next(); //Passer à l'execution du middleware suivant
 });
 
 app.use((req, res, next) => {
