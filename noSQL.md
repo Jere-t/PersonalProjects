@@ -32,6 +32,43 @@ So a NoSql base follow the **BASE** rules :
        "name":/pizza/i,         //regex --> "pizza" not case sensitive
        "address.street" : "5 Avenue"},
       {"name" : 1,                  //projection --> show only specific keys
+       "_id":0,
        "grades.score" : 1}
     )
 ```
+
+[Query operators](https://docs.mongodb.com/v3.2/reference/operator/query/)
+
+```javascript
+db.getCollection('restaurants').find(
+    {"borough":"Manhattan",
+     "grades.score":{
+         $lt:10, //less than 10
+         $not:{$gte:10} //not greater than or equal 10
+     }
+    },
+    {"name":1,"grades.score":1, "_id":0})
+    
+     db.restaurants.distinct("grades.grade");
+     
+     db.restaurants.aggregate([
+        { $match : {
+            "grades.0.grade":"C"
+        }},
+        { $project : {
+            "name":1, "borough":1, "_id":0
+        }},
+        { $sort : { "name":1 }},
+    ])
+    
+    varGroup = { $group : {"_id" : null, "total" : {$sum : 1} } };
+    db.restaurants.aggregate( [ varMatch, varGroup ] );
+
+    {"_id" : null, "total" : 220} //result
+    
+    varMatch = { $match : { "grades.0.grade":"C"} };
+    varGroup3 = { $group : {"_id" : "$borough", "total" : {$sum : 1} } };
+    db.restaurants.aggregate( [ varMatch, varGroup3 ] );
+    
+```
+
